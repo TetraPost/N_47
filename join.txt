@@ -1,0 +1,10 @@
+SELECT 
+	articles.content as articles,
+	comments.content as comments,
+	author.author_name as author
+
+	from articles
+	
+	LEFT JOIN comments ON articles.id = comments.articles_id
+	LEFT JOIN author   ON articles.author_id = author.id
+	WHERE articles.id = 6
